@@ -1,30 +1,49 @@
 <div align="center">
 
-# Proxy Manager CLI
+# 🚀 Poxy CLI - Advanced Proxy Management Tool
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Python](https://img.shields.io/badge/python-3.6%2B-blue)](https://www.python.org/downloads/)
-[![Platform](https://img.shields.io/badge/platform-Windows%20%7C%20macOS%20%7C%20Linux-lightgrey)](https://github.com/rezaulk/ProxyManagerCLI)
+[![Platform](https://img.shields.io/badge/platform-Windows%20%7C%20macOS%20%7C%20Linux-lightgrey)](https://github.com/rezaulwork/POXY-CLI)
+[![GitHub Repo](https://img.shields.io/badge/repo-POXY--CLI-blue)](https://github.com/rezaulwork/POXY-CLI)
 
 </div>
 
 <div align="center">
 
-A professional, cross-platform CLI tool for managing HTTP/SOCKS proxies across Windows, macOS, and Linux with beautiful, rich-formatted output.
+**🔥 Professional Cross-Platform Proxy Manager CLI Tool** - Manage HTTP/SOCKS proxies with ease across Windows, macOS, and Linux. Features beautiful formatted output, multiple proxy protocols, authentication support, and both system-wide and local proxy server modes.
+
+**[📥 Download](#-installation) • [📖 Usage Guide](#-usage) • [⭐ Features](#-features) • [🐛 Report Issues](https://github.com/rezaulwork/POXY-CLI/issues)**
 
 </div>
 
 <br/>
 
-## ✨ Features
+## 🔍 SEO Keywords
 
-* **Manage multiple proxy profiles** - Create, list, and delete proxy configurations
-* **Works across platforms** - Windows, macOS, and Linux support
-* **Two activation modes** - System-wide and local proxy server modes
-* **Supports multiple protocols** - HTTP, SOCKS4, SOCKS5 proxies
-* **Beautiful UI** - Rich-formatted output with colors and tables
-* **Authentication support** - Username/password authentication for proxies
-* **Lightweight and portable** - Easy to install and distribute
+**proxy manager, proxy cli, proxy tool, socks proxy, http proxy, socks5 proxy, proxy configuration, cross-platform proxy, windows proxy, macos proxy, linux proxy, command line proxy, proxy server, proxy authentication, proxy profile management**
+
+## ✨ Key Features & Benefits
+
+🚀 **Multi-Platform Proxy Management**
+* **Cross-platform compatibility** - Seamlessly works on Windows, macOS, and Linux
+* **Multiple proxy protocols** - Full support for HTTP, SOCKS4, and SOCKS5 proxies
+* **Dual operation modes** - System-wide proxy settings or local proxy server mode
+
+🔧 **Advanced Proxy Configuration**
+* **Profile management** - Create, list, modify, and delete proxy configurations easily
+* **Secure authentication** - Username/password authentication for protected proxies
+* **Flexible configuration** - Support for various proxy server types and settings
+
+🎨 **Enhanced User Experience**
+* **Rich formatted output** - Beautiful CLI interface with colors, tables, and styled panels
+* **Intuitive commands** - Easy-to-use command-line interface for all operations
+* **Interactive prompts** - User-friendly confirmation dialogs and guidance
+
+📦 **Easy Installation & Deployment**
+* **Lightweight and portable** - Minimal resource usage, easy to distribute
+* **Multiple installation methods** - Scripts, manual installation, or standalone executables
+* **No external dependencies** - Self-contained proxy management solution
 
 ## 📋 Prerequisites
 
