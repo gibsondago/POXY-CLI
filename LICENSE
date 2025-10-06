@@ -1,3 +1,35 @@
+<div align="center">
+
+# 📄 MIT License
+
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Open Source](https://img.shields.io/badge/Open%20Source-Yes-green)](#)
+[![Free to Use](https://img.shields.io/badge/Free%20to%20Use-Unlimited-blue)](#)
+
+</div>
+
+<div align="center">
+
+**🔓 Open Source Freedom** - Poxy CLI is released under the permissive MIT License, giving you the freedom to use, modify, and distribute the software.
+
+</div>
+
+<br/>
+
+---
+
+## 📋 License Details
+
+**📅 Effective Date**: 2025  
+**👤 Copyright Holder**: Rezaul Karim  
+**🏢 Organization**: REZ LAB  
+**📧 Contact**: work.rezaul@outlook.com
+
+---
+
+## 📜 MIT License Text
+
+```
 MIT License
 
 Copyright (c) 2025 Rezaul Karim
@@ -19,3 +51,68 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
+```
+
+---
+
+## 🎯 What This Means for You
+
+### ✅ **What You Can Do**
+- 🔧 **Use** the software for any purpose (commercial or personal)
+- 📝 **Modify** the code to suit your needs
+- 📦 **Distribute** copies to others
+- 🔄 **Sublicense** under different terms
+- 💰 **Sell** your modified versions
+- 🚀 **Use in proprietary software**
+
+### 📋 **What You Must Do**
+- 📄 **Include this license** in all copies or substantial portions
+- 🏷️ **Include the copyright notice** in your distributions
+- ⚖️ **Comply with the license terms** (no additional restrictions)
+
+### 🚫 **What You Cannot Do**
+- ❌ **Hold the authors liable** for any damages
+- ❌ **Remove or alter** the copyright and license notices
+- ❌ **Use the author's name** to endorse derived products without permission
+
+## 🌟 Why MIT License?
+
+The **MIT License** was chosen for Poxy CLI because it:
+
+- ✅ **Maximizes freedom** for users and contributors
+- ✅ **Encourages adoption** and contribution to the project
+- ✅ **Minimizes legal friction** for commercial use
+- ✅ **Supports open source** principles and community growth
+- ✅ **Is widely recognized** and understood by developers
+
+## 📚 Related Information
+
+### 🔗 **Project Documentation**
+- **[🏠 README.md](README.md)** - Project overview and setup instructions
+- **[📖 CONTRIBUTING.md](CONTRIBUTING.md)** - How to contribute to the project
+- **[🤝 CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md)** - Community guidelines
+- **[🔒 SECURITY.md](SECURITY.md)** - Security policy and vulnerability reporting
+
+### 🌐 **External Resources**
+- **[MIT License Official Site](https://opensource.org/licenses/MIT)** - Official MIT License text and information
+- **[Choose a License](https://choosealicense.com/licenses/mit/)** - MIT License explanation and comparison
+- **[Open Source Initiative](https://opensource.org/)** - Open source licensing information
+
+## 📞 Contact Information
+
+For questions about licensing, permissions, or commercial use:
+
+**👤 Author**: Rezaul Karim
+**📧 Email**: work.rezaul@outlook.com
+**🏢 Organization**: REZ LAB
+**🌐 GitHub**: [rezaulwork](https://github.com/rezaulwork)
+
+---
+
+<div align="center">
+
+**🏠 [Home](README.md) • 📖 [Contributing](CONTRIBUTING.md) • 🤝 [Code of Conduct](CODE_OF_CONDUCT.md) • 🔒 [Security](SECURITY.md) • 📋 [Usage](USAGE.md)**
+
+**📄 Licensed under MIT by [REZ LAB](https://github.com/rezaulwork)**
+
+</div>
