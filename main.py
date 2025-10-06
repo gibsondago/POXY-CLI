@@ -12,8 +12,23 @@ import argparse
 import sys
 import subprocess
 import platform
-from config_manager import *
-from proxy_server import *
+import time
+from typing import Dict, List, Optional, Any
+
+# Import specific functions to avoid wildcard import issues
+from config_manager import (
+    init_config,
+    add_profile,
+    list_profiles,
+    get_profile,
+    delete_profile
+)
+
+from proxy_server import (
+    start_http_proxy,
+    start_socks_proxy,
+    stop_all_servers
+)
 
 # Import rich for better formatting and colors
 from rich.console import Console
@@ -180,16 +195,17 @@ def list_proxy_profiles():
 
         for p in profiles:
             profile_data = get_profile(p)
-            has_auth = "✅ Yes" if profile_data.get('username') else "❌ No"
-            profile_type = profile_data.get('type', 'N/A').upper()
+            if profile_data:  # Type assertion for Pylance
+                has_auth = "✅ Yes" if profile_data.get('username') else "❌ No"
+                profile_type = profile_data.get('type', 'N/A').upper()
 
-            table.add_row(
-                f"🔹 {p}",
-                profile_type,
-                profile_data.get('host', 'N/A'),
-                str(profile_data.get('port', 'N/A')),
-                has_auth
-            )
+                table.add_row(
+                    f"🔹 {p}",
+                    profile_type,
+                    profile_data.get('host', 'N/A'),
+                    str(profile_data.get('port', 'N/A')),
+                    has_auth
+                )
 
         console.print(table)
     else:
@@ -336,7 +352,7 @@ def use_proxy_profile_interactive():
     console.print("\n[bold cyan]Available Profiles:[/bold cyan]")
     for i, profile in enumerate(profiles, 1):
         profile_data = get_profile(profile)
-        if profile_data:
+        if profile_data:  # Type assertion for Pylance
             console.print(f"{i}. 🔹 {profile} ({profile_data.get('type', 'N/A').upper()}) - {profile_data.get('host', 'N/A')}:{profile_data.get('port', 'N/A')}")
 
     try:
@@ -513,16 +529,17 @@ def main():
             
             for p in profiles:
                 profile_data = get_profile(p)
-                has_auth = "Yes" if profile_data.get('username') else "No"
-                profile_type = profile_data.get('type', 'N/A').upper()
-                
-                table.add_row(
-                    f"{p}",
-                    profile_type,
-                    profile_data.get('host', 'N/A'),
-                    str(profile_data.get('port', 'N/A')),
-                    has_auth
-                )
+                if profile_data:  # Type assertion for Pylance
+                    has_auth = "Yes" if profile_data.get('username') else "No"
+                    profile_type = profile_data.get('type', 'N/A').upper()
+
+                    table.add_row(
+                        f"{p}",
+                        profile_type,
+                        profile_data.get('host', 'N/A'),
+                        str(profile_data.get('port', 'N/A')),
+                        has_auth
+                    )
             
             console.print(table)
         else:
