@@ -9,6 +9,7 @@ Main CLI application with rich formatting.
 """
 
 import argparse
+import os
 import sys
 import subprocess
 import platform
@@ -555,7 +556,6 @@ def main():
         if profile:
             # For Windows batch files and non-interactive environments, delete without confirmation
             # For direct command line use, show confirmation if running interactively
-            import sys, os
             try:
                 # Check if we're in an interactive terminal
                 is_interactive = os.isatty(0) and os.isatty(1)  # stdin and stdout are TTYs
