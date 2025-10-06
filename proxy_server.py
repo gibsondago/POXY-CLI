@@ -12,6 +12,7 @@ import socket
 import threading
 import urllib.parse
 from http.server import HTTPServer, BaseHTTPRequestHandler
+from typing import List, Optional, Tuple, Any
 import socks
 import select
 
@@ -127,26 +128,36 @@ class HTTPProxyHandler(BaseHTTPRequestHandler):
             upstream_sock.close()
 
 # Global list to keep track of running servers for proper shutdown
-running_servers = []
+running_servers: List[Any] = []
 
-def start_http_proxy(local_port, upstream_host, upstream_port):
+def start_http_proxy(local_port: int, upstream_host: str, upstream_port: int) -> Any:
+    """Start an HTTP proxy server that forwards to upstream proxy.
+
+    Args:
+        local_port: Local port to listen on
+        upstream_host: Upstream proxy hostname/IP
+        upstream_port: Upstream proxy port
+
+    Returns:
+        The proxy server instance
+    """
     class Proxy(HTTPServer):
-        def __init__(self, server_address, handler_class):
+        def __init__(self, server_address: Tuple[str, int], handler_class: Any) -> None:
             super().__init__(server_address, handler_class)
             self.upstream_host = upstream_host
             self.upstream_port = upstream_port
-    
+
     server = Proxy(('localhost', local_port), HTTPProxyHandler)
     thread = threading.Thread(target=server.serve_forever)
     thread.daemon = True
     thread.start()
-    
+
     # Add to running servers list for potential cleanup
     running_servers.append(server)
-    
+
     return server
 
-def stop_all_servers():
+def stop_all_servers() -> None:
     """Stop all running proxy servers"""
     for server in running_servers:
         try:
@@ -154,11 +165,11 @@ def stop_all_servers():
             server.server_close()
         except Exception as e:
             print(f"Error stopping server: {e}")
-    
+
     # Clear the list
     running_servers.clear()
 
-def start_socks_proxy(local_port, upstream_host, upstream_port, username=None, password=None):
+def start_socks_proxy(local_port: int, upstream_host: str, upstream_port: int, username: Optional[str] = None, password: Optional[str] = None) -> Any:
     """Start a SOCKS proxy server that forwards to upstream proxy"""
     import socketserver
     
