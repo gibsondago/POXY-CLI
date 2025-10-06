@@ -44,16 +44,20 @@ fi
 # Run the main Python script with all arguments
 python3 main.py "$@"
 
-# Check if this was a 'use' command with local mode
-if [[ "$*" == *"use"*"--mode"*"local"* ]]; then
-    echo
-    echo "NOTE: Local proxy server is running. Press Ctrl+C to stop."
-    echo
-else
-    # For other commands, pause to show output
+# Check if arguments were provided
+if [ $# -eq 0 ]; then
+    # No arguments provided - show welcome message and pause
     echo
     echo "Press Enter to continue..."
     read
+else
+    # Arguments provided - check if this was a 'use' command with local mode
+    if [[ "$*" == *"use"*"--mode"*"local"* ]]; then
+        echo
+        echo "NOTE: Local proxy server is running. Press Ctrl+C to stop."
+        echo
+    fi
+    # For other commands with arguments, exit normally without pause
 fi
 
 # Deactivate the virtual environment

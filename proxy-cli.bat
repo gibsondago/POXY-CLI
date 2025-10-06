@@ -49,18 +49,21 @@ if errorlevel 1 (
 REM Run the main Python script with all arguments
 python main.py %*
 
-REM Check if this was a 'use' command with local mode
-echo %* | findstr /i "use.*--mode.*local" >nul
-if not errorlevel 1 (
+REM Check if arguments were provided
+if "%~1"=="" (
+    REM No arguments provided - show welcome message and pause
     echo.
-    echo NOTE: Local proxy server is running. Press Ctrl+C to stop.
-    echo.
-    goto :end
+    echo Press any key to continue...
+    pause >nul
+) else (
+    REM Arguments provided - check if this was a 'use' command with local mode
+    echo %* | findstr /i "use.*--mode.*local" >nul
+    if not errorlevel 1 (
+        echo.
+        echo NOTE: Local proxy server is running. Press Ctrl+C to stop.
+        echo.
+    )
+    REM For other commands with arguments, exit normally without pause
 )
-
-REM For other commands, pause to show output
-echo.
-echo Press any key to continue...
-pause >nul
 
 :end
