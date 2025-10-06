@@ -86,11 +86,30 @@ chmod +x install.sh
 
 ## 💻 Usage
 
-The proxy manager CLI can be used in three different ways:
+The proxy manager CLI offers multiple ways to use it:
 
-### 1. Convenience Scripts (Recommended)
-These scripts automatically handle virtual environment activation and provide enhanced formatting.
+### 1. Interactive Menu Mode (Recommended for New Users)
+Simply run the tool without any arguments to access the user-friendly menu:
 
+**On Windows:**
+```bash
+proxy-cli.bat
+```
+
+**On Linux/macOS:**
+```bash
+./proxy-cli.sh
+```
+
+This opens an interactive menu with numbered options:
+- **[1]** 📋 List all proxy profiles
+- **[2]** ➕ Add a new proxy profile
+- **[3]** 🗑️  Delete a proxy profile
+- **[4]** ▶️  Use/Activate a proxy profile
+- **[5]** ❓ Show help and usage information
+- **[0]** ❌ Exit
+
+### 2. Command Line Mode (For Advanced Users)
 **On Windows:**
 ```bash
 proxy-cli.bat <command> [options]
@@ -101,12 +120,12 @@ proxy-cli.bat <command> [options]
 ./proxy-cli.sh <command> [options]
 ```
 
-### 2. Direct Python Execution
+### 3. Direct Python Execution
 ```bash
 python main.py <command> [options]
 ```
 
-### 3. Standalone Executable
+### 4. Standalone Executable
 ```bash
 # Windows
 dist\proxy-cli.exe <command> [options]
@@ -117,7 +136,23 @@ dist/proxy-cli <command> [options]
 
 ## 🧰 Commands
 
-### Add a Proxy Profile
+### Interactive Menu Mode (New!)
+When you run the tool without arguments, you'll see an interactive menu:
+```
+🚀 Welcome to Proxy Manager CLI
+
+Available Options:
+[1] 📋 List all proxy profiles
+[2] ➕ Add a new proxy profile
+[3] 🗑️  Delete a proxy profile
+[4] ▶️  Use/Activate a proxy profile
+[5] ❓ Show help and usage information
+[0] ❌ Exit
+```
+
+### Command Line Mode
+
+#### Add a Proxy Profile
 ```bash
 proxy-cli.bat add <name> --type <http|socks4|socks5> --host <proxy_host> --port <port_number> --username <username> --password <password>
 ```
@@ -131,18 +166,18 @@ proxy-cli.bat add corporate_proxy --type http --host proxy.company.com --port 80
 proxy-cli.bat add secure_proxy --type socks5 --host 192.168.1.100 --port 1080 --username myuser --password mypass
 ```
 
-### List All Profiles
+#### List All Profiles
 ```bash
 proxy-cli.bat list
 ```
 Displays a formatted table with all proxy profiles and their details.
 
-### Delete a Profile
+#### Delete a Profile
 ```bash
 proxy-cli.bat delete <name>
 ```
 
-### Use a Proxy Profile
+#### Use a Proxy Profile
 ```bash
 proxy-cli.bat use <name> --mode <system|local>
 ```
@@ -152,6 +187,12 @@ Sets the proxy globally on your operating system.
 
 **Local proxy server mode:**
 Starts a local proxy server on `localhost:8080` that forwards to your configured proxy.
+
+#### Show Help Information
+```bash
+# Access comprehensive help from the interactive menu (option 5)
+# Or run the tool without arguments and select option 5
+```
 
 ## 🎨 Visual Features
 
@@ -205,6 +246,25 @@ proxy-cli/
 - macOS Terminal
 - Linux (Ubuntu, CentOS) Terminal
 
+## 🔧 What's New
+
+### ✨ Interactive Menu System
+- **User-friendly numbered options** (0-5) for easy navigation
+- **Guided workflows** for all proxy management tasks
+- **Input validation** and helpful error messages
+- **Rich visual formatting** with colors and emojis
+
+### 📚 Comprehensive Help System
+- **Detailed usage documentation** accessible from the menu (option 5)
+- **Complete feature overview** with explanations
+- **Security best practices** and troubleshooting tips
+- **Command-line examples** for advanced users
+
+### 🛠️ Improved Launcher Scripts
+- **Fixed pausing issues** - Scripts now only pause when showing the welcome menu
+- **Better error handling** and user feedback
+- **Cross-platform compatibility** improvements
+
 ## 📝 License
 
 MIT License - see LICENSE file for details.
@@ -215,47 +275,7 @@ MIT License - see LICENSE file for details.
 Email: work.rezaul@outlook.com  
 Powered By: REZ LAB
 
-## Project Structure
-
-```
-proxy-cli/
-├── profiles/
-├── config_manager.py     # Handles proxy profile configuration
-├── proxy_server.py       # Implements local proxy server functionality
-├── main.py               # Main CLI application
-├── requirements.txt      # Python dependencies
-└── README.md             # This file
-```
-
-## Configuration File
-
-Proxy profiles are stored in a configuration file:
-- Windows: `%USERPROFILE%\.proxy-cli\profiles.ini`
-- macOS/Linux: `~/.proxy-cli/profiles.ini`
-
-## Dependencies
-
-- `requests` - For HTTP requests (if needed in extensions)
-- `pysocks` - For SOCKS proxy support
-- `configparser` - For configuration file management
-- `argcomplete` - For command-line argument completion (optional)
-
-## Troubleshooting
-
-1. **Permission errors on Windows when setting system proxy**:
-   - Run the command prompt as Administrator
-   - Or use local proxy mode instead
-
-2. **Local proxy server not working**:
-   - Make sure the specified local port (default 8080) is not in use
-   - Check that your applications are configured to use localhost:8080 as the proxy
-
-3. **SOCKS proxy issues**:
-   - The current implementation has simplified SOCKS support
-   - For full SOCKS functionality, consider using dedicated proxy tools
-
-## Author
-
-Author: Rezaul Karim
-Email: work.rezaul@outlook.com
-Powered By: REZ LAB
+---
+<div align="center">
+  <strong>⭐ If you find this tool helpful, please consider giving it a star on GitHub!</strong>
+</div>
