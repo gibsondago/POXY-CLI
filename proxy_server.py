@@ -12,7 +12,7 @@ import socket
 import threading
 import urllib.parse
 from http.server import HTTPServer, BaseHTTPRequestHandler
-from typing import List, Optional, Tuple, Any
+from typing import List, Optional, Tuple, Any, cast
 import socks
 import select
 
@@ -21,8 +21,12 @@ class HTTPProxyHandler(BaseHTTPRequestHandler):
         """Handle CONNECT request for HTTPS connections"""
         try:
             # Establish connection to upstream proxy
-            upstream_host = self.server.upstream_host
-            upstream_port = self.server.upstream_port
+            upstream_host = getattr(self.server, 'upstream_host', None)
+            upstream_port = getattr(self.server, 'upstream_port', None)
+
+            if not upstream_host or not upstream_port:
+                self.send_error(500, "Proxy server not properly configured")
+                return
             
             # Create socket to upstream proxy
             upstream_sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
@@ -49,8 +53,12 @@ class HTTPProxyHandler(BaseHTTPRequestHandler):
     def do_GET(self):
         """Handle GET request through upstream proxy"""
         try:
-            upstream_host = self.server.upstream_host
-            upstream_port = self.server.upstream_port
+            upstream_host = getattr(self.server, 'upstream_host', None)
+            upstream_port = getattr(self.server, 'upstream_port', None)
+
+            if not upstream_host or not upstream_port:
+                self.send_error(500, "Proxy server not properly configured")
+                return
             
             # Create socket to upstream proxy
             upstream_sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
